@@ -1,0 +1,1777 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Pendaftaran Doorprize HUT Ke-81 PGRI & HGN 2026 - Kab. Tabalong</title>
+  <style>
+    :root {
+      --primary: #b91c1c;
+      --primary-dark: #991b1b;
+      --primary-light: #fef2f2;
+      --accent: #d97706;
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --text: #0f172a;
+      --text-muted: #475569;
+      --border: #cbd5e1;
+      --success: #15803d;
+      --success-bg: #dcfce7;
+      --danger: #b91c1c;
+      --danger-bg: #fee2e2;
+      --radius: 12px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Header & Banner */
+    header {
+      background: linear-gradient(135deg, #7f1d1d 0%, #b91c1c 60%, #991b1b 100%);
+      color: #ffffff;
+      padding: 16px;
+      border-bottom: 4px solid var(--accent);
+    }
+
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .header-top {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .logo-box {
+      background: #ffffff;
+      padding: 6px 12px;
+      border-radius: 10px;
+      display: inline-flex;
+      align-items: center;
+      max-width: 100%;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    }
+
+    .logo-box img {
+      height: 46px;
+      width: auto;
+      max-width: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .btn-admin-trigger {
+      background: rgba(255, 255, 255, 0.14);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: background 0.2s;
+    }
+
+    .btn-admin-trigger:hover {
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    .hero-title {
+      font-size: 1.35rem;
+      font-weight: 800;
+      line-height: 1.25;
+      margin-bottom: 4px;
+    }
+
+    .hero-sub {
+      font-size: 0.92rem;
+      color: #fecaca;
+      margin-bottom: 14px;
+    }
+
+    /* Status & Countdown Bar */
+    .status-strip {
+      background: rgba(0, 0, 0, 0.28);
+      border-radius: 10px;
+      padding: 10px 14px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      font-size: 0.85rem;
+    }
+
+    .badge-live {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 99px;
+      background: #16a34a;
+      color: #fff;
+    }
+
+    .badge-closed {
+      background: #dc2626;
+    }
+
+    .sync-pill {
+      font-size: 0.78rem;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 4px 10px;
+      border-radius: 99px;
+      color: #fef08a;
+    }
+
+    /* Main Cards */
+    main {
+      padding: 18px 14px 48px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid #e2e8f0;
+      border-radius: var(--radius);
+      padding: 20px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+
+    .card-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* Accordion Ketentuan */
+    details.rules-box {
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      border-radius: var(--radius);
+      margin-bottom: 16px;
+      overflow: hidden;
+    }
+
+    details.rules-box summary {
+      padding: 14px 18px;
+      font-weight: 700;
+      color: #92400e;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      user-select: none;
+    }
+
+    details.rules-box summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .rules-list {
+      padding: 0 18px 16px 36px;
+      color: #78350f;
+      font-size: 0.92rem;
+    }
+
+    .rules-list li {
+      margin-bottom: 6px;
+    }
+
+    /* Form Controls */
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      font-size: 0.92rem;
+      margin-bottom: 6px;
+      color: #1e293b;
+    }
+
+    label span.req {
+      color: var(--danger);
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    input[type="password"],
+    input[type="url"],
+    select {
+      width: 100%;
+      min-height: 48px;
+      padding: 10px 14px;
+      font-size: 16px; /* Prevents iOS auto-zoom */
+      color: var(--text);
+      background: #ffffff;
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    input:focus,
+    select:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(185, 28, 28, 0.12);
+    }
+
+    .hint {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    .warning-text {
+      font-size: 0.82rem;
+      color: #b91c1c;
+      font-weight: 600;
+      margin-top: 5px;
+      display: none;
+    }
+
+    .checkbox-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      background: #f1f5f9;
+      padding: 12px;
+      border-radius: 10px;
+      margin-bottom: 18px;
+      font-size: 0.88rem;
+      cursor: pointer;
+    }
+
+    .checkbox-row input {
+      width: 20px;
+      height: 20px;
+      margin-top: 2px;
+      accent-color: var(--primary);
+      flex-shrink: 0;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 48px;
+      padding: 12px 20px;
+      font-size: 1rem;
+      font-weight: 700;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      transition: opacity 0.2s, transform 0.1s;
+    }
+
+    .btn:active {
+      transform: scale(0.99);
+    }
+
+    .btn:disabled {
+      opacity: 0.55;
+      cursor: not-allowed;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #ffffff;
+      width: 100%;
+    }
+
+    .btn-primary:hover:not(:disabled) {
+      background: var(--primary-dark);
+    }
+
+    .btn-secondary {
+      background: #e2e8f0;
+      color: #0f172a;
+    }
+
+    .btn-success {
+      background: var(--success);
+      color: #ffffff;
+    }
+
+    .btn-sm {
+      min-height: 38px;
+      padding: 6px 12px;
+      font-size: 0.85rem;
+    }
+
+    /* Search Coupon Box */
+    .search-row {
+      display: flex;
+      gap: 8px;
+    }
+
+    .search-row input {
+      flex: 1;
+    }
+
+    /* Ticket / Coupon View */
+    .ticket-box {
+      border: 2px dashed var(--primary);
+      background: #fffafa;
+      border-radius: 14px;
+      padding: 18px;
+      text-align: center;
+      margin-top: 14px;
+    }
+
+    .ticket-badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 99px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .ticket-badge.sah {
+      background: var(--success-bg);
+      color: var(--success);
+    }
+
+    .ticket-badge.diskualifikasi {
+      background: var(--danger-bg);
+      color: var(--danger);
+    }
+
+    .ticket-number {
+      font-size: 1.75rem;
+      font-weight: 900;
+      color: var(--primary);
+      letter-spacing: 1.5px;
+      margin: 4px 0 10px;
+    }
+
+    .ticket-meta {
+      text-align: left;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 12px;
+      font-size: 0.88rem;
+      margin-bottom: 14px;
+    }
+
+    .ticket-meta div {
+      display: flex;
+      justify-content: space-between;
+      padding: 4px 0;
+      border-bottom: 1px solid #f1f5f9;
+      gap: 8px;
+    }
+
+    .ticket-meta div:last-child {
+      border-bottom: none;
+    }
+
+    .ticket-meta span:first-child {
+      color: var(--text-muted);
+    }
+
+    .ticket-meta span:last-child {
+      font-weight: 600;
+      text-align: right;
+    }
+
+    #qrCanvas {
+      margin: 8px auto 12px;
+      display: block;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 6px;
+      background: #ffffff;
+    }
+
+    /* Modal & Admin Vault */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.72);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 14px;
+      z-index: 1000;
+      overflow-y: auto;
+    }
+
+    .modal-backdrop.open {
+      display: flex;
+    }
+
+    .modal-card {
+      background: #ffffff;
+      width: 100%;
+      max-width: 440px;
+      border-radius: 14px;
+      padding: 22px;
+      box-shadow: 0 20px 35px rgba(0, 0, 0, 0.25);
+    }
+
+    .vault-panel {
+      display: none;
+      background: #f1f5f9;
+      min-height: 100vh;
+      padding: 16px;
+    }
+
+    .vault-panel.open {
+      display: block;
+    }
+
+    .vault-container {
+      max-width: 1060px;
+      margin: 0 auto;
+    }
+
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .kpi-card {
+      background: #ffffff;
+      padding: 14px;
+      border-radius: 10px;
+      border: 1px solid #e2e8f0;
+    }
+
+    .kpi-label {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .kpi-val {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--text);
+      margin-top: 2px;
+    }
+
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+
+    .tab-btn {
+      padding: 9px 14px;
+      border-radius: 8px;
+      border: 1px solid #cbd5e1;
+      background: #ffffff;
+      font-weight: 600;
+      font-size: 0.88rem;
+      cursor: pointer;
+    }
+
+    .tab-btn.active {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      background: #ffffff;
+      border-radius: 10px;
+      border: 1px solid #e2e8f0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+    }
+
+    th, td {
+      padding: 10px 12px;
+      text-align: left;
+      border-bottom: 1px solid #e2e8f0;
+      white-space: nowrap;
+    }
+
+    th {
+      background: #f8fafc;
+      font-weight: 700;
+      color: #334155;
+    }
+
+    pre.code-block {
+      background: #0f172a;
+      color: #f8fafc;
+      padding: 14px;
+      border-radius: 10px;
+      font-size: 0.8rem;
+      overflow-x: auto;
+      line-height: 1.45;
+      margin-top: 10px;
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #0f172a;
+      color: #ffffff;
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      z-index: 2000;
+      display: none;
+      max-width: 92vw;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    footer {
+      text-align: center;
+      padding: 18px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      border-top: 1px solid #e2e8f0;
+      background: #ffffff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ================= PUBLIC VIEW ================= -->
+  <div id="publicApp">
+    <header>
+      <div class="container">
+        <div class="header-top">
+          <div class="logo-box" id="logoContainer">
+            <img
+              src="Spanduk Berbagi Praktik Baik KSRG (1).png"
+              alt="Logo Kabupaten Tabalong, PGRI, HUT 81 PGRI, dan HGN 2026"
+              onerror="renderFallbackLogo(this)"
+            />
+          </div>
+          <button type="button" class="btn-admin-trigger" onclick="openPinModal()">
+            <span>🔒</span> Ruang Panitia
+          </button>
+        </div>
+
+        <h1 class="hero-title">Pendaftaran Peserta Doorprize HUT Ke-81 PGRI &amp; HGN Tahun 2026</h1>
+        <p class="hero-sub">Kabupaten Tabalong • Puncak Acara: Rabu, 2 Desember 2026</p>
+
+        <div class="status-strip">
+          <div>
+            <span id="regStatusBadge" class="badge-live">● PENDAFTARAN DIBUKA</span>
+            <span id="countdownText" style="margin-left: 8px; font-weight: 600;">Memuat waktu...</span>
+          </div>
+          <div class="sync-pill" id="cloudSyncIndicator">☁️ Terhubung ke Google Drive</div>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- Ketentuan & Syarat (Nomor 1-8 Langsung Tanpa Label Kriteria) -->
+      <details class="rules-box" open>
+        <summary>
+          <span>📋 Ketentuan &amp; Syarat Peserta Doorprize (Klik untuk Lipat/Buka)</span>
+          <span>▼</span>
+        </summary>
+        <ol class="rules-list">
+          <li>Peserta adalah pengurus PGRI Kabupaten Tabalong (yang bukan berasal dari instansi Disdikbud);</li>
+          <li>Pegawai dan karyawan Dinas Pendidikan dan Kebudayaan Kabupaten Tabalong;</li>
+          <li>Guru dan tenaga kependidikan aktif pada jenjang PAUD, TK/RA, SD/MI, SMP/MTs, SMA/SMK/MA di Kabupaten Tabalong;</li>
+          <li>Pengawas pendidikan aktif jenjang PAUD, TK/RA, SD/MI, SMP/MTs, SMA/SMK/MA di Kabupaten Tabalong;</li>
+          <li>Mengisi dan melengkapi identitas;</li>
+          <li>Setiap peserta hanya boleh mengisi satu kali formulir kupon kegiatan;</li>
+          <li>Peserta yang mengisi formulir lebih dari satu kali (dengan identitas yang sama), akan didiskualifikasi/ kehilangan haknya sebagai penerima doorprize;</li>
+          <li>Pendaftaran kupon DITUTUP tanggal 29 November 2026 pukul 17.00 WITA untuk proses validasi dan generate kupon.</li>
+        </ol>
+      </details>
+
+      <!-- Form Pendaftaran -->
+      <section class="card" id="formCard">
+        <div class="card-title">
+          <span>Formulir Registrasi Kupon Doorprize</span>
+          <span style="font-size: 0.8rem; color: var(--text-muted);" id="publicTotalCount">0 Terdaftar</span>
+        </div>
+
+        <div id="closedBanner" class="hidden" style="background: var(--danger-bg); color: var(--danger); padding: 14px; border-radius: 10px; font-weight: 700; margin-bottom: 14px;">
+          ⛔ Pendaftaran kupon telah DITUTUP (29 November 2026 pukul 17.00 WITA) untuk proses validasi panitia.
+        </div>
+
+        <form id="regForm" novalidate>
+          <div class="form-group">
+            <label for="nama">Nama Lengkap (Tanpa Gelar) <span class="req">*</span></label>
+            <input type="text" id="nama" name="nama" placeholder="Contoh: AHMAD FAUZI" required autocomplete="name" />
+            <div class="hint">Tuliskan nama asli sesuai KTP tanpa gelar depan maupun gelar belakang.</div>
+            <div class="warning-text" id="titleWarning">⚠️ Terdeteksi gelar akademis/kehormatan. Harap hapus gelar Anda!</div>
+          </div>
+
+          <div class="form-group">
+            <label for="instansi">Asal Instansi / Unit Kerja <span class="req">*</span></label>
+            <input type="text" id="instansi" name="instansi" placeholder="Contoh: SMPN 4 Tanjung / Disdikbud Tabalong" required />
+          </div>
+
+          <div class="form-group">
+            <label for="wilayah">Wilayah Keanggotaan (Cabang PGRI) <span class="req">*</span></label>
+            <select id="wilayah" name="wilayah" required>
+              <option value="">-- Pilih Wilayah Keanggotaan --</option>
+              <option value="1. PC Banua Lawas">1. PC Banua Lawas</option>
+              <option value="2. PC Bintang Ara">2. PC Bintang Ara</option>
+              <option value="3. PC Haruai">3. PC Haruai</option>
+              <option value="4. PC Jaro">4. PC Jaro</option>
+              <option value="5. PC Kelua">5. PC Kelua</option>
+              <option value="6. PC Muara Harus">6. PC Muara Harus</option>
+              <option value="7. PC Muara Uya">7. PC Muara Uya</option>
+              <option value="8. PC Murung Pudak">8. PC Murung Pudak</option>
+              <option value="9. PC Pugaan">9. PC Pugaan</option>
+              <option value="10. PC Tanjung">10. PC Tanjung</option>
+              <option value="11. PC Tanta">11. PC Tanta</option>
+              <option value="12. PC Upau">12. PC Upau</option>
+              <option value="13. PC Khusus Kemenag">13. PC Khusus Kemenag</option>
+              <option value="14. PC Khusus SMA-LB">14. PC Khusus SMA-LB</option>
+              <option value="15. PC Khusus SMK">15. PC Khusus SMK</option>
+              <option value="16. Dinas Pendidikan">16. Dinas Pendidikan</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="nik">8 Angka Terakhir NIK (Dari Belakang) <span class="req">*</span></label>
+            <input type="text" id="nik" name="nik" inputmode="numeric" maxlength="8" placeholder="Contoh: 01010001" required />
+            <div class="hint">Masukkan tepat 8 digit angka terakhir dari Nomor Induk Kependudukan (KTP) Anda.</div>
+          </div>
+
+          <div class="form-group">
+            <label for="hp">Nomor HP / WhatsApp Aktif <span class="req">*</span></label>
+            <input type="tel" id="hp" name="hp" inputmode="tel" placeholder="Contoh: 081234567890" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Alamat Email Aktif <span class="req">*</span></label>
+            <input type="email" id="email" name="email" placeholder="Contoh: nama@gmail.com" required autocomplete="email" />
+            <div class="hint">E-Kupon resmi akan otomatis dikirimkan ke alamat email ini setelah pendaftaran berhasil.</div>
+          </div>
+
+          <div class="form-group">
+            <label for="jabatan">Jabatan <span class="req">*</span></label>
+            <select id="jabatan" name="jabatan" required onchange="toggleJabatanLain(this.value)">
+              <option value="">-- Pilih Jabatan --</option>
+              <option value="Pegawai dan karyawan Disdikbud Tabalong">Pegawai dan karyawan Disdikbud Tabalong</option>
+              <option value="Pengurus PGRI Kabupaten">Pengurus PGRI Kabupaten</option>
+              <option value="Pengawas Sekolah">Pengawas Sekolah</option>
+              <option value="Guru">Guru</option>
+              <option value="Tenaga Kependidikan">Tenaga Kependidikan</option>
+              <option value="Lain-lain">Lain-lain (Isi manual)</option>
+            </select>
+          </div>
+
+          <div class="form-group hidden" id="jabatanLainWrap">
+            <label for="jabatanLain">Sebutkan Jabatan Anda <span class="req">*</span></label>
+            <input type="text" id="jabatanLain" placeholder="Tuliskan jabatan lengkap Anda" />
+          </div>
+
+          <label class="checkbox-row">
+            <input type="checkbox" id="agreeCheck" required />
+            <span>Saya menyatakan data di atas benar, hanya mendaftar <strong>1 (satu) kali</strong>, dan bersedia didiskualifikasi apabila terbukti mendaftar ganda.</span>
+          </label>
+
+          <button type="submit" class="btn btn-primary" id="submitBtn">
+            Daftar &amp; Terbitkan E-Kupon Doorprize
+          </button>
+        </form>
+      </section>
+
+      <!-- Hasil / E-Ticket Section -->
+      <section class="card hidden" id="resultCard">
+        <div class="card-title">
+          <span>Bukti Pendaftaran &amp; E-Kupon Digital</span>
+          <button type="button" class="btn btn-secondary btn-sm" onclick="resetFormView()">Daftar Baru</button>
+        </div>
+        <div id="ticketOutput"></div>
+      </section>
+
+      <!-- Cek Kupon Mandiri -->
+      <section class="card">
+        <div class="card-title">
+          <span>🔍 Cek Status &amp; Unduh Ulang Kupon Saya</span>
+        </div>
+        <div class="search-row">
+          <input type="text" id="lookupInput" placeholder="Masukkan 8 Digit NIK atau Email..." />
+          <button type="button" class="btn btn-secondary" onclick="lookupCoupon()">Cari</button>
+        </div>
+        <div id="lookupResult" style="margin-top: 12px;"></div>
+      </section>
+    </main>
+
+    <footer>
+      Panitia HUT Ke-81 PGRI &amp; Hari Guru Nasional Tahun 2026 • Kabupaten Tabalong
+    </footer>
+  </div>
+
+  <!-- ================= MODAL LOGIN RUANG PANITIA ================= -->
+  <div class="modal-backdrop" id="pinModal">
+    <div class="modal-card">
+      <h3 style="margin-bottom: 6px; font-size: 1.15rem;">🔒 Akses Ruang Panitia</h3>
+      <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 14px;">
+        Area khusus panitia verifikasi &amp; pengelola data doorprize HUT Ke-81 PGRI Kabupaten Tabalong.
+      </p>
+      <form id="pinForm" onsubmit="verifyPin(event)">
+        <div class="form-group">
+          <input
+            type="password"
+            id="pinInput"
+            placeholder="Masukkan Kode Akses Panitia"
+            autocomplete="off"
+            required
+          />
+          <div class="warning-text" id="pinError" style="display: none;">Kode akses tidak valid.</div>
+        </div>
+        <div style="display: flex; gap: 8px;">
+          <button type="button" class="btn btn-secondary" style="flex: 1;" onclick="closePinModal()">Batal</button>
+          <button type="submit" class="btn btn-primary" style="flex: 1;" id="pinSubmitBtn">Masuk</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ================= SECURED ADMIN VAULT ================= -->
+  <div class="vault-panel" id="adminVault">
+    <div class="vault-container">
+      <div class="card" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px;">
+        <div>
+          <h2 style="font-size: 1.2rem; font-weight: 800;">🛡️ Ruang Panitia Terkunci — PGRI Tabalong 2026</h2>
+          <p style="font-size: 0.82rem; color: var(--text-muted);">Manajemen Data 7.000+ Peserta, Validasi Kupon &amp; Integrasi Google Drive</p>
+        </div>
+        <div style="display: flex; gap: 8px;">
+          <button type="button" class="btn btn-secondary btn-sm" onclick="syncFromCloud(true)">🔄 Tarik Data Cloud</button>
+          <button type="button" class="btn btn-primary btn-sm" style="width: auto;" onclick="lockVault()">🔒 Kunci &amp; Keluar</button>
+        </div>
+      </div>
+
+      <!-- KPI -->
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-label">Total Masuk</div>
+          <div class="kpi-val" id="kpiTotal">0</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Peserta SAH</div>
+          <div class="kpi-val" style="color: var(--success);" id="kpiSah">0</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Diskualifikasi (Ganda)</div>
+          <div class="kpi-val" style="color: var(--danger);" id="kpiDis">0</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Antrean Lokal</div>
+          <div class="kpi-val" style="color: var(--accent);" id="kpiQueue">0</div>
+        </div>
+      </div>
+
+      <!-- Sub-Navigation Tabs -->
+      <div class="tabs">
+        <button type="button" class="tab-btn active" onclick="switchTab('tabData', this)">1. Data Peserta &amp; Kupon</button>
+        <button type="button" class="tab-btn" onclick="switchTab('tabCloud', this)">2. Koneksi Google Drive &amp; Code.gs</button>
+        <button type="button" class="tab-btn" onclick="switchTab('tabSystem', this)">3. Kontrol &amp; Uji Kapasitas</button>
+      </div>
+
+      <!-- TAB 1: DATA PESERTA -->
+      <div id="tabData" class="card">
+        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px;">
+          <input type="text" id="adminSearch" placeholder="Cari Nama, 8 Digit NIK, Instansi, Email..." style="flex: 2; min-width: 200px;" oninput="renderAdminTable(1)" />
+          <select id="adminFilterStatus" style="flex: 1; min-width: 140px;" onchange="renderAdminTable(1)">
+            <option value="">Semua Status</option>
+            <option value="SAH">SAH</option>
+            <option value="DISKUALIFIKASI">DISKUALIFIKASI</option>
+          </select>
+          <select id="adminFilterWilayah" style="flex: 1; min-width: 160px;" onchange="renderAdminTable(1)">
+            <option value="">Semua Wilayah PC</option>
+          </select>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px;">
+          <button type="button" class="btn btn-success btn-sm" onclick="generateMassCoupons()">🎟️ Generate Nomor Kupon Urut (DP-0001)</button>
+          <button type="button" class="btn btn-secondary btn-sm" onclick="exportCSV()">📥 Export Excel / CSV</button>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>No. Kupon</th>
+                <th>Nama Lengkap</th>
+                <th>8 Digit NIK</th>
+                <th>Wilayah PC</th>
+                <th>Asal Instansi</th>
+                <th>Jabatan</th>
+                <th>HP / WA</th>
+                <th>Email</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="adminTableBody"></tbody>
+          </table>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 12px; font-size: 0.85rem;">
+          <span id="pageInfo">Halaman 1</span>
+          <div style="display: flex; gap: 6px;">
+            <button type="button" class="btn btn-secondary btn-sm" onclick="changePage(-1)">◀ Prev</button>
+            <button type="button" class="btn btn-secondary btn-sm" onclick="changePage(1)">Next ▶</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 2: CLOUD & CODE.GS -->
+      <div id="tabCloud" class="card hidden">
+        <h3 style="font-size: 1rem; margin-bottom: 8px;">Endpoint Google Apps Script (Tersimpan Permanen)</h3>
+        <div class="form-group">
+          <input type="url" id="webhookUrlInput" />
+          <div class="hint">URL ini telah ditanamkan secara permanen di kode aplikasi agar sinkronisasi berjalan otomatis di GitHub Pages.</div>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px;">
+          <button type="button" class="btn btn-primary btn-sm" style="width: auto;" onclick="saveWebhookOverride()">Simpan Perubahan URL Sesi</button>
+          <button type="button" class="btn btn-success btn-sm" onclick="flushOfflineQueue()">☁️ Kirim Antrean ke Google Drive</button>
+        </div>
+
+        <hr style="border: none; border-top: 1px solid #e2e8f0; margin: 16px 0;" />
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <h3 style="font-size: 1rem;">Skrip Backend Google Apps Script (Code.gs)</h3>
+          <button type="button" class="btn btn-secondary btn-sm" onclick="copyCodeGs()">📋 Salin Code.gs</button>
+        </div>
+        <pre class="code-block" id="codeGsBlock"></pre>
+      </div>
+
+      <!-- TAB 3: KONTROL SISTEM -->
+      <div id="tabSystem" class="card hidden">
+        <h3 style="font-size: 1rem; margin-bottom: 10px;">Kontrol Status Pendaftaran &amp; Pengujian Kapasitas</h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 16px;">
+          <button type="button" class="btn btn-secondary btn-sm" onclick="toggleManualClose()">⏯️ Buka / Tutup Pendaftaran Manual</button>
+          <button type="button" class="btn btn-secondary btn-sm" onclick="runStressTest(500)">⚡ Simulasi +500 Peserta (Uji Kapasitas)</button>
+          <button type="button" class="btn btn-primary btn-sm" style="width: auto;" onclick="clearLocalDB()">🗑️ Bersihkan Cache Lokal Browser</button>
+        </div>
+        <p style="font-size: 0.85rem; color: var(--text-muted);">
+          Catatan: Aplikasi menggunakan <strong>IndexedDB</strong> berkapasitas besar (mampu menampung &gt;10.000 entri dengan cepat) yang tersinkronisasi dua arah dengan Google Spreadsheet Anda.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script>
+    // =========================================================================
+    // 1. KONFIGURASI UTAMA (TERTANAM PERMANEN UNTUK GITHUB PAGES)
+    // =========================================================================
+    const DEFAULT_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbwHmF1Zh0XTzo9ZQLEV_ykdUz8VvDzvYTIu5cxPuY-lGpQKWYYBvHNcpy1SzSu88Vrr/exec";
+    const DEADLINE_ISO = "2026-11-29T17:00:00+08:00"; // 29 Nov 2026 17.00 WITA
+    const VALID_PINS = ["30302973", "PGRI2026"];
+
+    const WILAYAH_LIST = [
+      "1. PC Banua Lawas", "2. PC Bintang Ara", "3. PC Haruai", "4. PC Jaro",
+      "5. PC Kelua", "6. PC Muara Harus", "7. PC Muara Uya", "8. PC Murung Pudak",
+      "9. PC Pugaan", "10. PC Tanjung", "11. PC Tanta", "12. PC Upau",
+      "13. PC Khusus Kemenag", "14. PC Khusus SMA-LB", "15. PC Khusus SMK",
+      "16. Dinas Pendidikan"
+    ];
+
+    let allRecords = [];
+    let currentPage = 1;
+    const PAGE_SIZE = 25;
+    let manualForceClosed = false;
+    let failedAttempts = 0;
+    let lockUntil = 0;
+
+    function getWebhookUrl() {
+      return localStorage.getItem("pgri_webhook_override") || DEFAULT_WEBHOOK_URL;
+    }
+
+    // Fallback SVG jika file gambar spanduk belum diunggah ke folder yang sama di GitHub
+    function renderFallbackLogo(imgEl) {
+      const box = imgEl.parentElement;
+      box.innerHTML = `
+        <svg width="240" height="44" viewBox="0 0 240 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="44" height="44" rx="8" fill="#B91C1C"/>
+          <circle cx="22" cy="22" r="14" stroke="#FACC15" stroke-width="2.5"/>
+          <path d="M22 11L25 19H19L22 11Z" fill="#FACC15"/>
+          <rect x="20" y="19" width="4" height="13" fill="#FFFFFF"/>
+          <text x="54" y="20" fill="#0F172A" font-family="sans-serif" font-weight="800" font-size="13">PGRI KAB. TABALONG</text>
+          <text x="54" y="35" fill="#B91C1C" font-family="sans-serif" font-weight="700" font-size="11">HUT KE-81 PGRI &amp; HGN 2026</text>
+        </svg>
+      `;
+    }
+
+    // =========================================================================
+    // 2. INDEXEDDB HIGH-CAPACITY ENGINE (7.000+ RECORDS)
+    // =========================================================================
+    const DB_NAME = "PGRI_Tabalong_2026_DB";
+    const STORE_NAME = "participants";
+
+    function openDB() {
+      return new Promise((resolve, reject) => {
+        const req = indexedDB.open(DB_NAME, 1);
+        req.onupgradeneeded = (e) => {
+          const db = e.target.result;
+          if (!db.objectStoreNames.contains(STORE_NAME)) {
+            const store = db.createObjectStore(STORE_NAME, { keyPath: "id" });
+            store.createIndex("nik", "nik", { unique: false });
+            store.createIndex("email", "email", { unique: false });
+          }
+        };
+        req.onsuccess = () => resolve(req.result);
+        req.onerror = () => reject(req.error);
+      });
+    }
+
+    async function dbGetAll() {
+      const db = await openDB();
+      return new Promise((resolve, reject) => {
+        const tx = db.transaction(STORE_NAME, "readonly");
+        const req = tx.objectStore(STORE_NAME).getAll();
+        req.onsuccess = () => resolve(req.result || []);
+        req.onerror = () => reject(req.error);
+      });
+    }
+
+    async function dbPut(record) {
+      const db = await openDB();
+      return new Promise((resolve, reject) => {
+        const tx = db.transaction(STORE_NAME, "readwrite");
+        tx.objectStore(STORE_NAME).put(record);
+        tx.oncomplete = () => resolve();
+        tx.onerror = () => reject(tx.error);
+      });
+    }
+
+    async function dbBulkPut(records) {
+      const db = await openDB();
+      return new Promise((resolve, reject) => {
+        const tx = db.transaction(STORE_NAME, "readwrite");
+        const store = tx.objectStore(STORE_NAME);
+        records.forEach((r) => store.put(r));
+        tx.oncomplete = () => resolve();
+        tx.onerror = () => reject(tx.error);
+      });
+    }
+
+    async function dbClear() {
+      const db = await openDB();
+      return new Promise((resolve, reject) => {
+        const tx = db.transaction(STORE_NAME, "readwrite");
+        tx.objectStore(STORE_NAME).clear();
+        tx.oncomplete = () => resolve();
+        tx.onerror = () => reject(tx.error);
+      });
+    }
+
+    // =========================================================================
+    // 3. SINKRONISASI DUA ARAH DENGAN GOOGLE APPS SCRIPT (doGet & doPost)
+    // =========================================================================
+    async function syncFromCloud(showNotification = false) {
+      const url = getWebhookUrl();
+      const indicator = document.getElementById("cloudSyncIndicator");
+      if (!url) return;
+
+      try {
+        indicator.textContent = "⏳ Menyinkronkan data...";
+        const res = await fetch(url, { method: "GET" });
+        const json = await res.json();
+
+        if (json && json.result === "success" && Array.isArray(json.data)) {
+          const cloudRecords = json.data.map((item, idx) => ({
+            id: `${item.nik}_${item.email}_${idx}`,
+            timestamp: item.timestamp || new Date().toISOString(),
+            couponNo: item.couponNo || "-",
+            nama: item.nama || "",
+            instansi: item.instansi || "",
+            wilayah: item.wilayah || "",
+            nik: String(item.nik || "").replace(/^'/, ""),
+            hp: String(item.hp || "").replace(/^'/, ""),
+            email: (item.email || "").toLowerCase(),
+            jabatan: item.jabatan || "",
+            status: item.status || "SAH",
+            synced: true
+          }));
+
+          // Pertahankan antrean lokal yang belum terkirim
+          const localRecords = await dbGetAll();
+          const unsynced = localRecords.filter((r) => !r.synced);
+
+          await dbClear();
+          if (cloudRecords.length > 0) await dbBulkPut(cloudRecords);
+          if (unsynced.length > 0) await dbBulkPut(unsynced);
+
+          await refreshState();
+          indicator.textContent = `☁️ Tersinkron (${allRecords.length} data)`;
+          if (showNotification) showToast(`Berhasil menarik ${cloudRecords.length} data dari Google Drive.`);
+        }
+      } catch (err) {
+        indicator.textContent = "📴 Mode Offline (Cache Lokal)";
+        if (showNotification) showToast("Gagal terhubung ke server Google. Menggunakan cache lokal.");
+      }
+    }
+
+    async function sendToCloud(record) {
+      const url = getWebhookUrl();
+      if (!url) return false;
+      try {
+        await fetch(url, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "text/plain;charset=utf-8" },
+          body: JSON.stringify(record)
+        });
+        record.synced = true;
+        await dbPut(record);
+        return true;
+      } catch (e) {
+        return false;
+      }
+    }
+
+    async function flushOfflineQueue() {
+      const unsynced = allRecords.filter((r) => !r.synced);
+      if (unsynced.length === 0) {
+        showToast("Semua data sudah tersinkron ke Google Drive.");
+        return;
+      }
+      showToast(`Mengirim ${unsynced.length} antrean data ke Google Drive...`);
+      for (const rec of unsynced) {
+        await sendToCloud(rec);
+      }
+      await refreshState();
+      showToast("Sinkronisasi antrean selesai!");
+    }
+
+    // =========================================================================
+    // 4. VALIDASI FORM & PENDAFTARAN PESERTA
+    // =========================================================================
+    const TITLE_REGEX = /(^|\s|\.)(S\.Pd|M\.Pd|S\.Ag|M\.Ag|S\.Kom|M\.Kom|S\.E|M\.M|S\.H|M\.H|S\.Si|M\.Si|S\.Sos|S\.IP|Drs|Dra|Dr|Prof|Ir|H|Hj|KH|Ust|Ustadz|A\.Ma|A\.Md|Gr)(\.|\s|$|,)/i;
+
+    document.getElementById("nama").addEventListener("input", function () {
+      const warn = document.getElementById("titleWarning");
+      warn.style.display = TITLE_REGEX.test(this.value) ? "block" : "none";
+    });
+
+    document.getElementById("nik").addEventListener("input", function () {
+      this.value = this.value.replace(/\D/g, "").slice(0, 8);
+    });
+
+    document.getElementById("hp").addEventListener("input", function () {
+      this.value = this.value.replace(/[^0-9+]/g, "").slice(0, 15);
+    });
+
+    function toggleJabatanLain(val) {
+      const wrap = document.getElementById("jabatanLainWrap");
+      const input = document.getElementById("jabatanLain");
+      if (val === "Lain-lain") {
+        wrap.classList.remove("hidden");
+        input.required = true;
+      } else {
+        wrap.classList.add("hidden");
+        input.required = false;
+      }
+    }
+
+    document.getElementById("regForm").addEventListener("submit", async function (e) {
+      e.preventDefault();
+      if (isRegistrationClosed()) {
+        showToast("Maaf, pendaftaran kupon sudah ditutup.");
+        return;
+      }
+
+      const nama = document.getElementById("nama").value.trim().toUpperCase();
+      const instansi = document.getElementById("instansi").value.trim();
+      const wilayah = document.getElementById("wilayah").value;
+      const nik = document.getElementById("nik").value.trim();
+      const hp = document.getElementById("hp").value.trim();
+      const email = document.getElementById("email").value.trim().toLowerCase();
+      const jabatanSel = document.getElementById("jabatan").value;
+      const jabatanLain = document.getElementById("jabatanLain").value.trim();
+      const agree = document.getElementById("agreeCheck").checked;
+
+      if (!nama || !instansi || !wilayah || !nik || !hp || !email || !jabatanSel) {
+        showToast("Harap lengkapi seluruh kolom wajib!");
+        return;
+      }
+
+      if (TITLE_REGEX.test(nama)) {
+        showToast("Nama lengkap harus TANPA GELAR akademis/kehormatan!");
+        document.getElementById("nama").focus();
+        return;
+      }
+
+      if (!/^\d{8}$/.test(nik)) {
+        showToast("NIK harus berisi tepat 8 digit angka terakhir!");
+        document.getElementById("nik").focus();
+        return;
+      }
+
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        showToast("Format alamat email tidak valid!");
+        document.getElementById("email").focus();
+        return;
+      }
+
+      const jabatan = jabatanSel === "Lain-lain" ? jabatanLain : jabatanSel;
+      if (!jabatan) {
+        showToast("Harap tuliskan jabatan Anda!");
+        return;
+      }
+
+      if (!agree) {
+        showToast("Harap centang pernyataan persetujuan peserta.");
+        return;
+      }
+
+      const btn = document.getElementById("submitBtn");
+      btn.disabled = true;
+      btn.textContent = "Memproses & Menyimpan Data...";
+
+      // Cek Duplikasi (Aturan Poin 6 & 7)
+      const isDuplicate = allRecords.some(
+        (r) => r.nik === nik || r.email === email
+      );
+
+      const sahCount = allRecords.filter((r) => r.status === "SAH").length;
+      const status = isDuplicate ? "DISKUALIFIKASI" : "SAH";
+      const couponNo = isDuplicate
+        ? "DISKUALIFIKASI-GANDA"
+        : `DP-${String(sahCount + 1).padStart(4, "0")}`;
+
+      const record = {
+        id: `${Date.now()}_${nik}`,
+        timestamp: new Date().toISOString(),
+        couponNo,
+        nama,
+        instansi,
+        wilayah,
+        nik,
+        hp,
+        email,
+        jabatan,
+        status,
+        synced: false
+      };
+
+      await dbPut(record);
+      await sendToCloud(record);
+      await refreshState();
+
+      btn.disabled = false;
+      btn.textContent = "Daftar & Terbitkan E-Kupon Doorprize";
+
+      renderTicket(record);
+      document.getElementById("formCard").classList.add("hidden");
+      document.getElementById("resultCard").classList.remove("hidden");
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    function resetFormView() {
+      document.getElementById("regForm").reset();
+      document.getElementById("jabatanLainWrap").classList.add("hidden");
+      document.getElementById("resultCard").classList.add("hidden");
+      document.getElementById("formCard").classList.remove("hidden");
+    }
+
+    // =========================================================================
+    // 5. E-TICKET DIGITAL & UNDUH PNG CANVAS
+    // =========================================================================
+    function renderTicket(rec, targetId = "ticketOutput") {
+      const isSah = rec.status === "SAH";
+      const container = document.getElementById(targetId);
+
+      container.innerHTML = `
+        <div class="ticket-box">
+          <span class="ticket-badge ${isSah ? "sah" : "diskualifikasi"}">
+            ${isSah ? "✓ TERVERIFIKASI SAH" : "✕ DISKUALIFIKASI (DATA GANDA)"}
+          </span>
+          <div style="font-size: 0.82rem; color: var(--text-muted);">NOMOR KUPON DOORPRIZE</div>
+          <div class="ticket-number">${rec.couponNo}</div>
+          <canvas id="qrCanvas_${rec.id}" width="130" height="130" style="margin: 8px auto 12px; display: block; border: 1px solid #e2e8f0; border-radius: 8px; padding: 6px; background: #fff;"></canvas>
+          <div class="ticket-meta">
+            <div><span>Nama Peserta</span><span>${rec.nama}</span></div>
+            <div><span>8 Digit NIK</span><span>${rec.nik}</span></div>
+            <div><span>Asal Instansi</span><span>${rec.instansi}</span></div>
+            <div><span>Wilayah PC</span><span>${rec.wilayah}</span></div>
+            <div><span>Jabatan</span><span>${rec.jabatan}</span></div>
+            <div><span>Email</span><span>${rec.email}</span></div>
+          </div>
+          ${
+            isSah
+              ? `<p style="font-size: 0.82rem; color: var(--success); margin-bottom: 12px;">
+                  ✉️ E-Kupon otomatis dikirimkan ke <strong>${rec.email}</strong>. Simpan juga gambar kupon di bawah ini.
+                </p>
+                <button type="button" class="btn btn-primary" onclick='downloadTicketPNG(${JSON.stringify(rec)})'>
+                  📥 Unduh Gambar E-Kupon (PNG)
+                </button>`
+              : `<p style="font-size: 0.84rem; color: var(--danger); font-weight: 600;">
+                  Sesuai ketentuan poin 7, identitas (8 Digit NIK / Email) sudah terdaftar sebelumnya sehingga kupon ini dinyatakan gugur/diskualifikasi.
+                </p>`
+          }
+        </div>
+      `;
+
+      drawDeterministicQR(`qrCanvas_${rec.id}`, `${rec.couponNo}|${rec.nik}|${rec.nama}`);
+    }
+
+    function drawDeterministicQR(canvasId, text) {
+      const canvas = document.getElementById(canvasId);
+      if (!canvas) return;
+      const ctx = canvas.getContext("2d");
+      const size = 118;
+      const cells = 21;
+      const cellSize = size / cells;
+
+      ctx.fillStyle = "#ffffff";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      let hash = 2166136261;
+      for (let i = 0; i < text.length; i++) {
+        hash ^= text.charCodeAt(i);
+        hash += (hash << 1) + (hash << 4) + (hash << 7) + (hash << 8) + (hash << 24);
+      }
+
+      ctx.fillStyle = "#0f172a";
+      for (let r = 0; r < cells; r++) {
+        for (let c = 0; c < cells; c++) {
+          const isFinder =
+            (r < 7 && c < 7) ||
+            (r < 7 && c >= cells - 7) ||
+            (r >= cells - 7 && c < 7);
+          if (isFinder) {
+            const localR = r < 7 ? r : r - (cells - 7);
+            const localC = c < 7 ? c : c - (cells - 7);
+            if (
+              localR === 0 || localR === 6 ||
+              localC === 0 || localC === 6 ||
+              (localR >= 2 && localR <= 4 && localC >= 2 && localC <= 4)
+            ) {
+              ctx.fillRect(6 + c * cellSize, 6 + r * cellSize, cellSize, cellSize);
+            }
+          } else {
+            const bit = ((hash >>> ((r * cells + c) % 31)) ^ (r * 7 + c * 13)) & 1;
+            if (bit === 1) {
+              ctx.fillRect(6 + c * cellSize, 6 + r * cellSize, cellSize, cellSize);
+            }
+          }
+        }
+      }
+    }
+
+    function downloadTicketPNG(rec) {
+      const canvas = document.createElement("canvas");
+      canvas.width = 720;
+      canvas.height = 460;
+      const ctx = canvas.getContext("2d");
+
+      // Background
+      ctx.fillStyle = "#ffffff";
+      ctx.fillRect(0, 0, 720, 460);
+
+      // Header Banner
+      ctx.fillStyle = "#b91c1c";
+      ctx.fillRect(0, 0, 720, 96);
+      ctx.fillStyle = "#ffffff";
+      ctx.font = "bold 22px sans-serif";
+      ctx.fillText("E-KUPON DOORPRIZE HUT KE-81 PGRI & HGN 2026", 28, 42);
+      ctx.font = "16px sans-serif";
+      ctx.fillStyle = "#fecaca";
+      ctx.fillText("KABUPATEN TABALONG • PENGUNDIAN: 2 DESEMBER 2026", 28, 70);
+
+      // Border
+      ctx.strokeStyle = "#b91c1c";
+      ctx.lineWidth = 4;
+      ctx.strokeRect(12, 12, 696, 436);
+
+      // Coupon Box
+      ctx.fillStyle = "#fef2f2";
+      ctx.fillRect(28, 116, 664, 76);
+      ctx.fillStyle = "#64748b";
+      ctx.font = "bold 13px sans-serif";
+      ctx.fillText("NOMOR KUPON UNDIAN RESMI", 46, 140);
+      ctx.fillStyle = "#b91c1c";
+      ctx.font = "900 32px sans-serif";
+      ctx.fillText(rec.couponNo, 46, 176);
+
+      // Details
+      ctx.fillStyle = "#0f172a";
+      ctx.font = "bold 17px sans-serif";
+      const lines = [
+        ["Nama Peserta", rec.nama],
+        ["8 Digit NIK", rec.nik],
+        ["Asal Instansi", rec.instansi],
+        ["Wilayah PC", rec.wilayah],
+        ["Jabatan", rec.jabatan],
+        ["Status", "SAH / TERVERIFIKASI"]
+      ];
+      let y = 230;
+      lines.forEach(([k, v]) => {
+        ctx.fillStyle = "#475569";
+        ctx.font = "15px sans-serif";
+        ctx.fillText(k, 32, y);
+        ctx.fillStyle = "#0f172a";
+        ctx.font = "bold 15px sans-serif";
+        ctx.fillText(": " + v, 180, y);
+        y += 32;
+      });
+
+      const link = document.createElement("a");
+      link.download = `Kupon_PGRI81_${rec.couponNo}_${rec.nik}.png`;
+      link.href = canvas.toDataURL("image/png");
+      link.click();
+    }
+
+    function lookupCoupon() {
+      const q = document.getElementById("lookupInput").value.trim().toLowerCase();
+      const resBox = document.getElementById("lookupResult");
+      if (!q) {
+        showToast("Masukkan 8 digit NIK atau email Anda.");
+        return;
+      }
+      const found = allRecords.find(
+        (r) => r.nik === q || r.email === q || r.couponNo.toLowerCase() === q
+      );
+      if (!found) {
+        resBox.innerHTML = `<div style="color: var(--danger); font-size: 0.9rem; font-weight: 600;">Data tidak ditemukan. Pastikan 8 digit NIK atau email sesuai saat mendaftar.</div>`;
+        return;
+      }
+      renderTicket(found, "lookupResult");
+    }
+
+    // =========================================================================
+    // 6. RUANG PANITIA TERKUNCI (PIN GATE & DASHBOARD)
+    // =========================================================================
+    function openPinModal() {
+      if (sessionStorage.getItem("pgri_vault_unlocked") === "1") {
+        openVault();
+        return;
+      }
+      document.getElementById("pinInput").value = "";
+      document.getElementById("pinError").style.display = "none";
+      document.getElementById("pinModal").classList.add("open");
+      setTimeout(() => document.getElementById("pinInput").focus(), 100);
+    }
+
+    function closePinModal() {
+      document.getElementById("pinModal").classList.remove("open");
+    }
+
+    function verifyPin(e) {
+      e.preventDefault();
+      const now = Date.now();
+      const errEl = document.getElementById("pinError");
+
+      if (now < lockUntil) {
+        const sisa = Math.ceil((lockUntil - now) / 1000);
+        errEl.textContent = `Terlalu banyak percobaan. Tunggu ${sisa} detik.`;
+        errEl.style.display = "block";
+        return;
+      }
+
+      const val = document.getElementById("pinInput").value.trim();
+      if (VALID_PINS.includes(val)) {
+        failedAttempts = 0;
+        sessionStorage.setItem("pgri_vault_unlocked", "1");
+        closePinModal();
+        openVault();
+      } else {
+        failedAttempts++;
+        if (failedAttempts >= 5) {
+          lockUntil = Date.now() + 30000;
+          errEl.textContent = "Akses dikunci sementara selama 30 detik.";
+        } else {
+          errEl.textContent = "Kode akses panitia tidak valid.";
+        }
+        errEl.style.display = "block";
+      }
+    }
+
+    function openVault() {
+      document.getElementById("publicApp").classList.add("hidden");
+      document.getElementById("adminVault").classList.add("open");
+      document.getElementById("webhookUrlInput").value = getWebhookUrl();
+      renderAdminTable(1);
+    }
+
+    function lockVault() {
+      sessionStorage.removeItem("pgri_vault_unlocked");
+      document.getElementById("adminVault").classList.remove("open");
+      document.getElementById("publicApp").classList.remove("hidden");
+      showToast("Ruang Panitia telah dikunci.");
+    }
+
+    function switchTab(tabId, btnEl) {
+      ["tabData", "tabCloud", "tabSystem"].forEach((id) => {
+        document.getElementById(id).classList.add("hidden");
+      });
+      document.getElementById(tabId).classList.remove("hidden");
+      document.querySelectorAll(".tab-btn").forEach((b) => b.classList.remove("active"));
+      btnEl.classList.add("active");
+    }
+
+    function renderAdminTable(page) {
+      currentPage = page;
+      const q = document.getElementById("adminSearch").value.trim().toLowerCase();
+      const st = document.getElementById("adminFilterStatus").value;
+      const wil = document.getElementById("adminFilterWilayah").value;
+
+      const filtered = allRecords.filter((r) => {
+        const matchQ =
+          !q ||
+          r.nama.toLowerCase().includes(q) ||
+          r.nik.includes(q) ||
+          r.instansi.toLowerCase().includes(q) ||
+          r.email.toLowerCase().includes(q) ||
+          r.couponNo.toLowerCase().includes(q);
+        const matchSt = !st || r.status === st;
+        const matchWil = !wil || r.wilayah === wil;
+        return matchQ && matchSt && matchWil;
+      });
+
+      const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+      if (currentPage > totalPages) currentPage = totalPages;
+
+      const start = (currentPage - 1) * PAGE_SIZE;
+      const slice = filtered.slice(start, start + PAGE_SIZE);
+
+      const tbody = document.getElementById("adminTableBody");
+      if (slice.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="10" style="text-align:center; padding: 20px; color: var(--text-muted);">Belum ada data peserta yang sesuai filter.</td></tr>`;
+      } else {
+        tbody.innerHTML = slice
+          .map(
+            (r, i) => `
+          <tr>
+            <td>${start + i + 1}</td>
+            <td><strong>${r.couponNo}</strong></td>
+            <td>${r.nama}</td>
+            <td>${r.nik}</td>
+            <td>${r.wilayah}</td>
+            <td>${r.instansi}</td>
+            <td>${r.jabatan}</td>
+            <td>${r.hp}</td>
+            <td>${r.email}</td>
+            <td>
+              <span style="padding: 3px 8px; border-radius: 6px; font-weight: 700; font-size: 0.75rem; background: ${
+                r.status === "SAH" ? "#dcfce7" : "#fee2e2"
+              }; color: ${r.status === "SAH" ? "#15803d" : "#b91c1c"};">
+                ${r.status}
+              </span>
+            </td>
+          </tr>`
+          )
+          .join("");
+      }
+
+      document.getElementById("pageInfo").textContent = `Halaman ${currentPage} dari ${totalPages} (${filtered.length} data)`;
+    }
+
+    function changePage(delta) {
+      renderAdminTable(Math.max(1, currentPage + delta));
+    }
+
+    async function generateMassCoupons() {
+      let counter = 1;
+      for (const rec of allRecords) {
+        if (rec.status === "SAH") {
+          rec.couponNo = `DP-${String(counter).padStart(4, "0")}`;
+          counter++;
+        } else {
+          rec.couponNo = "DISKUALIFIKASI-GANDA";
+        }
+      }
+      await dbBulkPut(allRecords);
+      await refreshState();
+      renderAdminTable(currentPage);
+      showToast(`Berhasil memvalidasi dan mengurutkan ${counter - 1} nomor kupon SAH.`);
+    }
+
+    function exportCSV() {
+      const headers = ["No", "No Kupon", "Nama Lengkap", "8 Digit NIK", "Wilayah PC", "Instansi", "Jabatan", "No HP/WA", "Email", "Status", "Waktu Daftar"];
+      const rows = allRecords.map((r, idx) => [
+        idx + 1,
+        r.couponNo,
+        `"${r.nama.replace(/"/g, '""')}"`,
+        `"'${r.nik}"`,
+        `"${r.wilayah}"`,
+        `"${r.instansi.replace(/"/g, '""')}"`,
+        `"${r.jabatan.replace(/"/g, '""')}"`,
+        `"'${r.hp}"`,
+        r.email,
+        r.status,
+        r.timestamp
+      ]);
+
+      const csvContent = "\uFEFF" + [headers.join(","), ...rows.map((e) => e.join(","))].join("\n");
+      const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `Data_Doorprize_PGRI81_Tabalong_${new Date().toISOString().slice(0, 10)}.csv`;
+      a.click();
+    }
+
+    function saveWebhookOverride() {
+      const val = document.getElementById("webhookUrlInput").value.trim();
+      if (!val) return;
+      localStorage.setItem("pgri_webhook_override", val);
+      showToast("URL Endpoint diperbarui untuk sesi browser ini.");
+      syncFromCloud(true);
+    }
+
+    function toggleManualClose() {
+      manualForceClosed = !manualForceClosed;
+      updateCountdown();
+      showToast(manualForceClosed ? "Pendaftaran ditutup manual oleh panitia." : "Pendaftaran dibuka kembali.");
+    }
+
+    async function runStressTest(count) {
+      const dummy = [];
+      const base = allRecords.length;
+      for (let i = 1; i <= count; i++) {
+        const nik = String(10000000 + base + i).slice(-8);
+        dummy.push({
+          id: `sim_${Date.now()}_${i}`,
+          timestamp: new Date().toISOString(),
+          couponNo: `DP-${String(base + i).padStart(4, "0")}`,
+          nama: `PESERTA SIMULASI ${base + i}`,
+          instansi: `SDN ${((i % 20) + 1)} TANJUNG`,
+          wilayah: WILAYAH_LIST[i % WILAYAH_LIST.length],
+          nik,
+          hp: `0812${nik}`,
+          email: `guru${base + i}@tabalong.sch.id`,
+          jabatan: "Guru",
+          status: "SAH",
+          synced: true
+        });
+      }
+      await dbBulkPut(dummy);
+      await refreshState();
+      renderAdminTable(1);
+      showToast(`Simulasi +${count} data berhasil dimuat ke IndexedDB!`);
+    }
+
+    async function clearLocalDB() {
+      if (!confirm("Hapus cache lokal browser dan muat ulang data dari Google Drive?")) return;
+      await dbClear();
+      await refreshState();
+      await syncFromCloud(true);
+      renderAdminTable(1);
+    }
+
+    // =========================================================================
+    // 7. COUNTDOWN, STATE REFRESH & CODE.GS DISPLAY
+    // =========================================================================
+    function isRegistrationClosed() {
+      if (manualForceClosed) return true;
+      return Date.now() >= new Date(DEADLINE_ISO).getTime();
+    }
+
+    function updateCountdown() {
+      const badge = document.getElementById("regStatusBadge");
+      const text = document.getElementById("countdownText");
+      const closedBanner = document.getElementById("closedBanner");
+      const submitBtn = document.getElementById("submitBtn");
+
+      if (isRegistrationClosed()) {
+        badge.textContent = "● PENDAFTARAN DITUTUP";
+        badge.classList.add("badge-closed");
+        text.textContent = "Batas waktu 29 Nov 2026 17.00 WITA berakhir";
+        closedBanner.classList.remove("hidden");
+        submitBtn.disabled = true;
+        return;
+      }
+
+      badge.textContent = "● PENDAFTARAN DIBUKA";
+      badge.classList.remove("badge-closed");
+      closedBanner.classList.add("hidden");
+      submitBtn.disabled = false;
+
+      const diff = new Date(DEADLINE_ISO).getTime() - Date.now();
+      const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const m = Math.floor((diff / 1000 / 60) % 60);
+      const s = Math.floor((diff / 1000) % 60);
+      text.textContent = `Tutup dalam: ${d}h ${h}j ${m}m ${s}d`;
+    }
+
+    async function refreshState() {
+      allRecords = await dbGetAll();
+      const sah = allRecords.filter((r) => r.status === "SAH").length;
+      const dis = allRecords.filter((r) => r.status !== "SAH").length;
+      const queue = allRecords.filter((r) => !r.synced).length;
+
+      document.getElementById("publicTotalCount").textContent = `${sah} Kupon SAH`;
+      document.getElementById("kpiTotal").textContent = allRecords.length;
+      document.getElementById("kpiSah").textContent = sah;
+      document.getElementById("kpiDis").textContent = dis;
+      document.getElementById("kpiQueue").textContent = queue;
+    }
+
+    function showToast(msg) {
+      const el = document.getElementById("toast");
+      el.textContent = msg;
+      el.style.display = "block";
+      clearTimeout(window._toastTimer);
+      window._toastTimer = setTimeout(() => {
+        el.style.display = "none";
+      }, 3600);
+    }
+
+    const CODE_GS_SOURCE = `// GOOGLE APPS SCRIPT (Code.gs) - PGRI TABALONG 2026
+function doGet(e) {
+  try {
+    var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+    var rows = sheet.getDataRange().getValues();
+    var records = [];
+    for (var i = 1; i < rows.length; i++) {
+      var r = rows[i];
+      if (!r[2]) continue;
+      records.push({
+        timestamp: r[0],
+        couponNo: String(r[1]),
+        nama: String(r[2]),
+        instansi: String(r[3]),
+        wilayah: String(r[4]),
+        nik: String(r[5]).replace(/^'/, ''),
+        hp: String(r[6]).replace(/^'/, ''),
+        email: String(r[7]),
+        jabatan: String(r[8]),
+        status: String(r[9])
+      });
+    }
+    return ContentService.createTextOutput(JSON.stringify({ result: "success", data: records }))
+      .setMimeType(ContentService.MimeType.JSON);
+  } catch (err) {
+    return ContentService.createTextOutput(JSON.stringify({ result: "error", message: err.toString() }))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+}
+
+function doPost(e) {
+  var lock = LockService.getScriptLock();
+  lock.tryLock(10000);
+  try {
+    var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+    var data = JSON.parse(e.postData.contents);
+    if (sheet.getLastRow() === 0) {
+      sheet.appendRow(["Timestamp", "No Kupon", "Nama", "Instansi", "Wilayah", "NIK8", "HP", "Email", "Jabatan", "Status"]);
+    }
+    sheet.appendRow([
+      new Date(),
+      data.couponNo || "-",
+      data.nama,
+      data.instansi,
+      data.wilayah,
+      "'" + data.nik,
+      "'" + data.hp,
+      data.email,
+      data.jabatan,
+      data.status
+    ]);
+    if (data.status === 'SAH' && data.email) {
+      var kuponNomor = data.couponNo || "TERDAFTAR";
+      var subject = "E-KUPON DOORPRIZE HUT Ke-81 PGRI Tabalong - " + kuponNomor;
+      var htmlBody = \`
+        <div style="font-family: Arial, sans-serif; max-width: 520px; margin: 0 auto; border: 2px solid #b91c1c; border-radius: 10px; overflow: hidden;">
+          <div style="background-color: #b91c1c; color: #ffffff; padding: 16px; text-align: center;">
+            <h2 style="margin: 0; font-size: 18px;">E-KUPON DOORPRIZE RESMI</h2>
+            <p style="margin: 4px 0 0; font-size: 13px;">HUT Ke-81 PGRI &amp; HGN Tahun 2026 Kab. Tabalong</p>
+          </div>
+          <div style="padding: 20px; color: #1e293b; line-height: 1.5;">
+            <p>Halo <strong>\${data.nama}</strong>, pendaftaran kupon doorprize Anda telah terverifikasi <strong>SAH</strong>.</p>
+            <div style="background-color: #fef2f2; border: 1px dashed #b91c1c; padding: 12px; text-align: center; margin: 16px 0; border-radius: 6px;">
+              <span style="font-size: 12px; color: #64748b; display: block;">NOMOR KUPON ANDA</span>
+              <strong style="font-size: 22px; color: #b91c1c; letter-spacing: 1px;">\${kuponNomor}</strong>
+            </div>
+            <ul style="padding-left: 18px; margin: 12px 0;">
+              <li><strong>Instansi:</strong> \${data.instansi}</li>
+              <li><strong>Wilayah:</strong> \${data.wilayah}</li>
+              <li><strong>Jabatan:</strong> \${data.jabatan}</li>
+              <li><strong>Status:</strong> SAH / VALID</li>
+            </ul>
+            <p style="font-size: 13px; color: #475569; margin-top: 16px;">
+              Simpan email ini atau unduh kupon digital Anda sebagai bukti kepesertaan pada tanggal <strong>2 Desember 2026</strong>.
+            </p>
+          </div>
+        </div>
+      \`;
+      MailApp.sendEmail({ to: data.email, subject: subject, htmlBody: htmlBody });
+    }
+    return ContentService.createTextOutput(JSON.stringify({ result: "success" }))
+      .setMimeType(ContentService.MimeType.JSON);
+  } catch (err) {
+    return ContentService.createTextOutput(JSON.stringify({ result: "error", message: err.toString() }))
+      .setMimeType(ContentService.MimeType.JSON);
+  } finally {
+    lock.releaseLock();
+  }
+}`;
+
+    function copyCodeGs() {
+      navigator.clipboard.writeText(CODE_GS_SOURCE);
+      showToast("Kode Code.gs berhasil disalin!");
+    }
+
+    // Init
+    (async function init() {
+      const filterWil = document.getElementById("adminFilterWilayah");
+      WILAYAH_LIST.forEach((w) => {
+        const opt = document.createElement("option");
+        opt.value = w;
+        opt.textContent = w;
+        filterWil.appendChild(opt);
+      });
+
+      document.getElementById("codeGsBlock").textContent = CODE_GS_SOURCE;
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+
+      await refreshState();
+      await syncFromCloud(false);
+    })();
+  </script>
+</body>
+</html>
