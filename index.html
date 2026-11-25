@@ -1001,7 +1001,7 @@
     }
 
     // =========================================================================
-    // 3. SINKRONISASI TERPUSAT DENGAN GOOGLE APPS SCRIPT (doGet & doPost)
+    // 3. SINKRONISASI TERPUSAT DENGAN GOOGLE APPS SCRIPT (redirect: "follow")
     // =========================================================================
     async function syncFromCloud(showNotification = false) {
       const url = getWebhookUrl();
@@ -1010,7 +1010,11 @@
 
       try {
         indicator.textContent = "⏳ Menyinkronkan data...";
-        const res = await fetch(url, { method: "GET" });
+        const res = await fetch(url, {
+          method: "GET",
+          redirect: "follow"
+        });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const json = await res.json();
 
         if (json && json.result === "success" && Array.isArray(json.data)) {
@@ -1037,16 +1041,20 @@
           if (unsynced.length > 0) await dbBulkPut(unsynced);
 
           await refreshState();
+          if (document.getElementById("adminVault").classList.contains("open")) {
+            renderAdminTable(currentPage);
+          }
           indicator.textContent = `☁️ Tersinkron (${allRecords.length} data)`;
           if (showNotification) showToast(`Berhasil menarik ${cloudRecords.length} data dari Google Drive.`);
+        } else {
+          throw new Error(json.message || "Respons server tidak valid");
         }
       } catch (err) {
         indicator.textContent = "📴 Mode Offline (Cache Lokal)";
-        if (showNotification) showToast("Gagal terhubung ke server Google. Menggunakan cache lokal.");
+        if (showNotification) showToast("Gagal terhubung ke server Google. Pastikan Code.gs sudah di-deploy versi baru (Anyone).");
       }
     }
 
-    // Mengirim data ke Code.gs dan membaca balik nomor kupon resmi (DP-XXXX) dari server
     async function submitToCentralServer(payload) {
       const url = getWebhookUrl();
       if (!url) return { ok: false };
@@ -1054,15 +1062,19 @@
       try {
         const res = await fetch(url, {
           method: "POST",
+          redirect: "follow",
           headers: { "Content-Type": "text/plain;charset=utf-8" },
           body: JSON.stringify(payload)
         });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const json = await res.json();
+
         if (json && json.result === "success") {
+          const fallbackSah = allRecords.filter((r) => r.status === "SAH").length + 1;
           return {
             ok: true,
-            couponNo: json.couponNo,
-            status: json.status
+            couponNo: json.couponNo || `DP-${String(fallbackSah).padStart(4, "0")}`,
+            status: json.status || "SAH"
           };
         }
         return { ok: false, error: json.message || "Server error" };
@@ -1189,7 +1201,6 @@
         jabatan
       };
 
-      // Kirim ke server terpusat agar nomor urut DP-XXXX diterbitkan langsung oleh Spreadsheet
       const serverRes = await submitToCentralServer(payload);
 
       let finalRecord;
@@ -1201,7 +1212,6 @@
           synced: true
         };
       } else {
-        // Fallback jika offline: simpan ke antrean lokal untuk disinkronkan kemudian
         const isLocalDup = allRecords.some((r) => r.nik === nik || r.email === email);
         finalRecord = {
           ...payload,
@@ -1455,11 +1465,12 @@
       }
     }
 
-    function openVault() {
+    async function openVault() {
       document.getElementById("publicApp").classList.add("hidden");
       document.getElementById("adminVault").classList.add("open");
       document.getElementById("webhookUrlInput").value = getWebhookUrl();
       renderAdminTable(1);
+      await syncFromCloud(false);
     }
 
     function lockVault() {
